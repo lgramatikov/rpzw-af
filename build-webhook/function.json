@@ -1,0 +1,27 @@
+{
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "post"
+      ]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "type": "serviceBus",
+      "name": "outputSbMsg",
+      "queueName": "builds",
+      "connection": "rpzwbus_RootManageSharedAccessKey_SERVICEBUS",
+      "accessRights": "Send",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}
